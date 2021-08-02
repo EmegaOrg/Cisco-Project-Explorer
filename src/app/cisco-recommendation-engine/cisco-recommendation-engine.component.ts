@@ -18,7 +18,6 @@ export class CiscoRecommendationEngineComponent implements OnInit {
   }
 
   loadQuestions(dataSet: number): void {
-      console.log(this.wifiSelectorQuestions,"WIFI",this.modelSelectorQuestions,"Model")
     return  this.questionary.getQuestions(dataSet);
 }
  

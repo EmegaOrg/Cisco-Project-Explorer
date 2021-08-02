@@ -3,7 +3,12 @@
     top: 3px;
     position: absolute;
 }
-
+h1{
+    left: 180px;
+    top: 15px;
+    position: absolute;
+    font: bold;  
+}
 .cisco-home-page-nav-bar{
     padding-top: 15px;
     justify-content: flex-end;

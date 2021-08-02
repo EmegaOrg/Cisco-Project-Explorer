@@ -1,0 +1,21 @@
+.cisco-logo{
+    left: 30px;
+    top: 3px;
+    position: absolute;
+}
+
+.cisco-home-page-nav-bar{
+    padding-top: 15px;
+    justify-content: flex-end;
+}
+
+mat-tab-group ::ng-deep .mat-ink-bar{
+    background-color: #049fd9 !important;
+}
+
+p{
+    margin: 0px;
+    position: absolute;
+    right: 100px;
+    top: 30px;
+}

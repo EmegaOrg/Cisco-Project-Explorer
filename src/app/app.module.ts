@@ -53,7 +53,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CiscoHomePageComponent } from './cisco-home-page/cisco-home-page.component';
 import { CiscoRecommendationEngineComponent } from './cisco-recommendation-engine/cisco-recommendation-engine.component';
 import { SectionComponent } from './section/section.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -68,6 +68,7 @@ import { SectionComponent } from './section/section.component';
   imports: [
     AppRoutingModule ,
     CommonModule,
+    NgbModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,

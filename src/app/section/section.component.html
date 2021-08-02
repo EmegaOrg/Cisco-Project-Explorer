@@ -1,7 +1,6 @@
-<section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+<!-- <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
-     <!--Slide 1 --> 
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Cisco</span></h2>
@@ -10,7 +9,6 @@
         </div>
       </div>
 
-      <!-- Slide 2-->
       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
@@ -19,7 +17,6 @@
         </div>
       </div>
 
-      <!-- Slide 3 -->
       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -54,5 +51,40 @@
       </g>
 </svg>
   </section> 
-  <!-- End Hero --> 
+ -->
 
+ <div class="container-fluid">
+  <h1>
+  Angular 10 Carousel Example
+  </h1>
+  <h2>Full tutorial in Techiediaries</h2>
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="wrapper">
+        <img [src]="images[0]" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>First Slide</h3>
+        <p> Angular 10 Carousel Example </p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="wrapper">
+        <img [src]="images[1]" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Second Slide</h3>
+        <p> Check out Techiediaries</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="wrapper">
+        <img [src]="images[2]"  alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third Slide</h3>
+        <p>for full tutorial...</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  </div>

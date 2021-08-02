@@ -10,7 +10,7 @@
             
                     <form *ngIf="step =='Wi Fi Selector'">
                         <h1>Answer a few quick questions, and we will help you identify the new switch for refreshing your SMB customers' existing Catalyst 2960 Series.</h1>
-                        <mat-card class="example-card" *ngFor="let que of questions.questionSetValue">
+                        <mat-card class="example-card" *ngFor="let que of wifiSelectorQuestions">
                             <mat-card-header>
                                 <mat-card-title>{{que.questionValue}}<span><button class="tooltip-info" matTooltip="Info about the action" mat-icon-button aria-label="Example icon-button with a heart icon">
                                     <mat-icon>help_outline</mat-icon>
@@ -31,7 +31,7 @@
 
 
                     <form *ngIf="step == 'Model Selector'">
-                        <div class="my-div" *ngFor="let que of model1.questionSetValue">
+                        <div class="my-div" *ngFor="let que of modelSelectorQuestions">
                             <div>
                                 <mat-label class="example-form">{{que.questionValue}}</mat-label>
                             </div>
@@ -109,7 +109,7 @@
                     </div>
 
                     <div *ngIf="step == 'Consult Sales'">
-                        <mat-card class="example-card" *ngFor="let que of questions.questionSetValue">
+                        <mat-card class="example-card" *ngFor="let que of wifiSelectorQuestions">
                             <mat-card-header>
                                 <mat-card-title>{{que.questionValue}}</mat-card-title>
                             </mat-card-header>

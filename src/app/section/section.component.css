@@ -208,3 +208,18 @@ section {
     font-family: "Poppins", sans-serif;
     color: #2a2c39;
   }  
+
+  ngb-carousel .wrapper {
+    position: relative;
+    height: 0;
+    padding-top: 55%; /* Keep ratio for 900x500 images */
+  }
+  
+  ngb-carousel .wrapper>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  

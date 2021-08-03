@@ -45,10 +45,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StepperCardComponent } from './stepper-card/stepper-card.component';
-import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ToolBarComponent } from './tool-bar/tool-bar.component'; // CLI imports
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CiscoHomePageComponent } from './cisco-home-page/cisco-home-page.component';
 import { CiscoRecommendationEngineComponent } from './cisco-recommendation-engine/cisco-recommendation-engine.component';
@@ -58,9 +55,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
-    StepperCardComponent,
-    HomePageComponent,
-    ToolBarComponent,
     CiscoHomePageComponent,
     CiscoRecommendationEngineComponent,
     SectionComponent

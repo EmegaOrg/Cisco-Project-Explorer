@@ -31,8 +31,6 @@
 
                 </form>
 
-
-
                 <form *ngIf="step == 'Model Selector'">
                     <h1>Based on your answers, we recommend:</h1>
                     <h3>Cisco Meraki MR Wi-Fi 6</h3>
@@ -55,8 +53,6 @@
                         </mat-card-actions>
                     </mat-card>
                 </form>
-
-
 
                 <div class="row" *ngIf="step == 'Pricing'">
                     <h1>Choose a plan</h1>
@@ -125,18 +121,17 @@
 
                 <div *ngIf="step == 'Consult Sales'">
                     <h1>Please feel free to consult us.</h1>
-                    <mat-card *ngFor="let lbl of formLables" class="example-card">
-                        <mat-form-field appearance="fill">
-                            <mat-label>{{lbl}}</mat-label>
-                            <input matInput placeholder="{{lbl}}">
-                            <mat-icon matSuffix></mat-icon>
-                            <mat-hint></mat-hint>
-                        </mat-form-field>
+                    <mat-card class="example-card">
+                        <div *ngFor="let lbl of formLables">
+                            <mat-form-field appearance="fill">
+                                <mat-label>{{lbl}}</mat-label>
+                                <input matInput placeholder="{{lbl}}">
+                                <mat-icon matSuffix></mat-icon>
+                                <mat-hint></mat-hint>
+                            </mat-form-field>
+                        </div>
                     </mat-card>
                 </div>
-
-
-
 
                 <div class="row top-bottom-padding">
 

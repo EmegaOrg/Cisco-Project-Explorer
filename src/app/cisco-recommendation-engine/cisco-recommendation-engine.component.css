@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+.top-bottom-padding{
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
 mat-radio-button {
     margin: 16px 16px 0 16px;
 }

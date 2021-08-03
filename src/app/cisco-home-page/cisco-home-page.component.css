@@ -8,6 +8,8 @@ h1{
     top: 15px;
     position: absolute;
     font: bold;  
+    color: #2a2c39;
+    font-weight: bold;
 }
 .cisco-home-page-nav-bar{
     padding-top: 15px;

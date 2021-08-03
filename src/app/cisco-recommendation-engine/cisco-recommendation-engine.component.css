@@ -1,28 +1,32 @@
 .my-div {
     margin: 0 0 22px 0;
     text-align: center;
-  }
+}
 
-  mat-radio-button{
+mat-radio-button {
     margin: 16px 16px 0 16px;
-  }
+}
 
-  .move-right{
+.move-right {
     display: flex;
     flex-direction: row-reverse;
 }
 
-/* PRICING STYLES */
-.demo
-{
-	padding: 100px 0;
-}
-.heading-title
-{
-	margin-bottom: 100px;
+.display-flex {
+    display: flex;
 }
 
-.pricingTable{
+/* PRICING STYLES */
+
+.demo {
+    padding: 100px 0;
+}
+
+.heading-title {
+    margin-bottom: 100px;
+}
+
+.pricingTable {
     border: 2px solid #e3e3e3;
     text-align: center;
     position: relative;
@@ -30,8 +34,7 @@
     transform: translateZ(0px);
 }
 
-.pricingTable:before,
-.pricingTable:after{
+.pricingTable:before, .pricingTable:after {
     content: "";
     position: absolute;
     top: -2px;
@@ -42,47 +45,47 @@
     transition: all 0.5s ease 0s;
 }
 
-.pricingTable:before{
-    border-right: 2px solid #673ab7;
-    border-left: 2px solid #673ab7;
+.pricingTable:before {
+    border-right: 2px solid #049fd9;
+    border-left: 2px solid #049fd9;
     transform: scaleY(0);
     transform-origin: 100% 0 0;
 }
 
-.pricingTable:after{
-    border-bottom: 2px solid #673ab7;
-    border-top: 2px solid #673ab7;
+.pricingTable:after {
+    border-bottom: 2px solid #049fd9;
+    border-top: 2px solid #049fd9;
     transform: scaleX(0);
     transform-origin: 0 100% 0;
 }
 
-.pricingTable:hover:before{
+.pricingTable:hover:before {
     transform: scaleY(1);
 }
 
-.pricingTable:hover:after{
+.pricingTable:hover:after {
     transform: scaleX(1);
 }
 
-.pricingTable .pricingTable-header{
-    background: #673ab7;
+.pricingTable .pricingTable-header {
+    background: #049fd9;
     color: #fff;
     margin: -2px -2px 35px;
     padding: 40px 0;
 }
 
-.pricingTable .heading{
+.pricingTable .heading {
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 5px 0;
 }
 
-.pricingTable .subtitle{
+.pricingTable .subtitle {
     font-size: 14px;
     display: block;
 }
 
-.pricingTable .price-value{
+.pricingTable .price-value {
     font-size: 50px;
     font-weight: 600;
     margin-top: 10px;
@@ -90,7 +93,7 @@
     display: inline-block;
 }
 
-.pricingTable .currency{
+.pricingTable .currency {
     font-size: 45px;
     font-weight: normal;
     position: absolute;
@@ -98,26 +101,26 @@
     left: -30px;
 }
 
-.pricingTable .month{
+.pricingTable .month {
     font-size: 20px;
     position: absolute;
     bottom: 17px;
     right: -40px;
 }
 
-.pricingTable .pricing-content{
+.pricingTable .pricing-content {
     list-style: none;
     padding: 0;
     margin-bottom: 30px;
 }
 
-.pricingTable .pricing-content li{
+.pricingTable .pricing-content li {
     font-size: 16px;
     color: #7a7e82;
     line-height: 40px;
 }
 
-.pricingTable .read{
+.pricingTable .read {
     display: inline-block;
     border: 2px solid #7a7e82;
     border-right: none;
@@ -130,12 +133,12 @@
     transition: all 0.3s ease 0s;
 }
 
-.pricingTable .read:hover{
-    border-color: #673ab7;
-    color: #673ab7;
+.pricingTable .read:hover {
+    border-color: #049fd9;
+    color: #049fd9;
 }
 
-.pricingTable .read i{
+.pricingTable .read i {
     font-size: 19px;
     margin-top: -10px;
     position: absolute;
@@ -144,12 +147,11 @@
     transition: all 0.3s ease 0s;
 }
 
-.pricingTable .read:hover i{
+.pricingTable .read:hover i {
     right: 5px;
 }
 
-.pricingTable .read:before,
-.pricingTable .read:after{
+.pricingTable .read:before, .pricingTable .read:after {
     content: "";
     display: block;
     height: 30px;
@@ -159,37 +161,50 @@
     transition: all 0.3s ease 0s;
 }
 
-.pricingTable .read:before{
+.pricingTable .read:before {
     bottom: -6px;
     transform: rotate(45deg);
 }
 
-.pricingTable .read:after{
+.pricingTable .read:after {
     top: -6px;
     transform: rotate(-45deg);
 }
 
-.pricingTable .read:hover:before,
-.pricingTable .read:hover:after{
-    border-left-color: #673ab7;
+.pricingTable .read:hover:before, .pricingTable .read:hover:after {
+    border-left-color: #049fd9;
 }
 
-@media screen and (max-width: 990px){
-    .pricingTable{ margin-bottom: 25px; }
+@media screen and (max-width: 990px) {
+    .pricingTable {
+        margin-bottom: 25px;
+    }
 }
 
-h1{
+h1 {
     font-size: 16px;
-
     text-align: center;
-    color: #049fd9;
+    color: #0460d9;
     margin: 40px auto;
-    width: 750px;
+    width: 400px;
 }
 
-.mat-card-header .mat-card-title{
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: darkslategrey;
+    margin: 40px auto;
+}
+
+.mat-card-header .mat-card-title {
     font-size: 16px;
 }
+
+.mat-form-field {
+    width: 450px;
+}
+
 .example-card {
     display: flex;
     flex-direction: column;
@@ -197,60 +212,64 @@ h1{
     justify-items: center;
     align-items: center;
     margin-top: 10px;
-
-      /* Standard syntax*/
- 
+    /* Standard syntax*/
     /**animation: fadeInLeft  ease 5s;**/
 }
-.recommendation-content{
+
+.recommendation-content {
     display: flex;
     justify-content: center;
 }
-.cisco-banner{
+
+.cisco-banner {
     display: flex;
     justify-content: center;
 }
-.example-actions{
+
+.example-actions {
     color: black;
     width: fit-content;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 30px;
 }
-.tooltip-info{
+
+.tooltip-info {
     width: 35px;
     height: 35px;
     color: #049fd9;
 }
-.tooltip-info .mat-icon{
+
+.tooltip-info .mat-icon {
     font-size: 20px;
 }
-.example-actions .mat-icon{
+
+.example-actions .mat-icon {
     color: #049fd9;
     opacity: .2;
     font-size: 18px;
 }
 
-.get-recommend{
+.get-recommend {
     justify-content: center;
-    background-color: #049fd9;;
+    background-color: #049fd9;
+    ;
 }
 
-mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container{
+mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container {
     justify-content: center;
 }
 
-mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container .mat-stepper-horizontal-line{
-flex:none
+mat-horizontal-stepper ::ng-deep .mat-horizontal-stepper-header-container .mat-stepper-horizontal-line {
+    flex: none
 }
-
 
 @keyframes fadeInLeft {
     0% {
-       opacity: 0;
-       transform: translateX(400px);
+        opacity: 0;
+        transform: translateX(400px);
     }
- 
     100% {
-       opacity: 1;
-       transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
- } 
+}

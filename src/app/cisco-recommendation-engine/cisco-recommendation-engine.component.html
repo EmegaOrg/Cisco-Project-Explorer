@@ -1,53 +1,67 @@
 <div class="cisco-banner">
-<img class="cisco-logo" src="../assets/Capture.PNG">
+    <img class="cisco-logo" src="../assets/Capture.PNG">
 </div>
 <div class="recommendation-content">
-    
-<mat-horizontal-stepper>
-    <div *ngFor="let step of steps">
-        
-        <mat-step matStepperIcon="phone"  label={{step}}>
-            
-                    <form *ngIf="step =='Wi Fi Selector'">
-                        <h1>Answer a few quick questions, and we will help you identify the new switch for refreshing your SMB customers' existing Catalyst 2960 Series.</h1>
-                        <mat-card class="example-card" *ngFor="let que of wifiSelectorQuestions">
-                            <mat-card-header>
-                                <mat-card-title>{{que.questionValue}}<span><button class="tooltip-info" matTooltip="Info about the action" mat-icon-button aria-label="Example icon-button with a heart icon">
-                                    <mat-icon>help_outline</mat-icon>
-                                  </button></span></mat-card-title>
-                            </mat-card-header>
 
-                            <mat-card-actions>
-                                <button *ngFor="let opt of que.options" class="example-actions" mat-icon-button
-                                    color="primary" aria-label="Example icon-button with a heart icon">
-                                    <mat-icon>circle </mat-icon> {{opt.optionValue}}
-                                </button>
+    <mat-horizontal-stepper>
+        <div *ngFor="let step of steps">
 
-                            </mat-card-actions>
-                        </mat-card>
+            <mat-step matStepperIcon="phone" label={{step}}>
 
-                    </form>
+                <form *ngIf="step =='Refresh Selector'">
+                    <h1>Answer a few quick questions, and we will help you identify the new switch for refreshing your
+                        SMB customers' existing Catalyst 2960 Series.</h1>
+                    <mat-card class="example-card" *ngFor="let que of wifiSelectorQuestions">
+                        <mat-card-header>
+                            <mat-card-title>{{que.questionValue}}<span><button class="tooltip-info"
+                                        matTooltip="Info about the action" mat-icon-button
+                                        aria-label="Example icon-button with a heart icon">
+                                        <mat-icon>help_outline</mat-icon>
+                                    </button></span></mat-card-title>
+                        </mat-card-header>
 
+                        <mat-card-actions>
+                            <button *ngFor="let opt of que.options" class="example-actions" mat-icon-button
+                                color="primary" aria-label="Example icon-button with a heart icon">
+                                <mat-icon>circle </mat-icon> {{opt.optionValue}}
+                            </button>
 
+                        </mat-card-actions>
+                    </mat-card>
 
-                    <form *ngIf="step == 'Model Selector'">
-                        <div class="my-div" *ngFor="let que of modelSelectorQuestions">
-                            <div>
-                                <mat-label class="example-form">{{que.questionValue}}</mat-label>
-                            </div>
-                            <div>
-                                <mat-radio-group aria-label="" *ngFor="let opt of que.options">
-                                    <mat-radio-button color="primary" value="{{opt.optionValue}}">{{opt.optionValue}}
-                                    </mat-radio-button>
-                                </mat-radio-group>
-                            </div>
-                        </div>
-                    </form>
+                </form>
 
 
 
-                    <div class="row" *ngIf="step == 'Pricing'">
-                        <div class="col-md-4 col-sm-6">
+                <form *ngIf="step == 'Model Selector'">
+                    <h1>Based on your answers, we recommend:</h1>
+                    <h3>Cisco Meraki MR Wi-Fi 6</h3>
+                    <h1>Answer a few further questions, and we will help you identify the new model (SKU).</h1>
+                    <mat-card class="example-card" *ngFor="let que of modelSelectorQuestions">
+                        <mat-card-header>
+                            <mat-card-title>{{que.questionValue}}<span><button class="tooltip-info"
+                                        matTooltip="Info about the action" mat-icon-button
+                                        aria-label="Example icon-button with a heart icon">
+                                        <mat-icon>help_outline</mat-icon>
+                                    </button></span></mat-card-title>
+                        </mat-card-header>
+
+                        <mat-card-actions>
+                            <button *ngFor="let opt of que.options" class="example-actions" mat-icon-button
+                                color="primary" aria-label="Example icon-button with a heart icon">
+                                <mat-icon>circle </mat-icon> {{opt.optionValue}}
+                            </button>
+
+                        </mat-card-actions>
+                    </mat-card>
+                </form>
+
+
+
+                <div class="row" *ngIf="step == 'Pricing'">
+                    <h1>Choose a plan</h1>
+                    <mat-card class="display-flex">
+                        <div class="col-md">
                             <div class="pricingTable">
                                 <div class="pricingTable-header">
                                     <h3 class="heading">Standard</h3>
@@ -67,7 +81,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md">
                             <div class="pricingTable">
                                 <div class="pricingTable-header">
                                     <h3 class="heading">Business</h3>
@@ -87,7 +101,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md">
                             <div class="pricingTable">
                                 <div class="pricingTable-header">
                                     <h3 class="heading">Premium</h3>
@@ -106,42 +120,68 @@
                                 <mat-checkbox color="primary"></mat-checkbox>
                             </div>
                         </div>
+                    </mat-card>
+                </div>
+
+                <div *ngIf="step == 'Consult Sales'">
+                    <h1>Please feel free to consult us.</h1>
+                    <mat-card *ngFor="let lbl of formLables" class="example-card">
+                        <mat-form-field appearance="fill">
+                            <mat-label>{{lbl}}</mat-label>
+                            <input matInput placeholder="{{lbl}}">
+                            <mat-icon matSuffix></mat-icon>
+                            <mat-hint></mat-hint>
+                        </mat-form-field>
+                    </mat-card>
+                </div>
+
+
+
+
+                <div class="row top-bottom-padding">
+
+                    <div *ngIf="step =='Refresh Selector'">
+                        <div class="col-sm move-right">
+                            <button mat-raised-button matStepperNext class="get-recommend" color="primary">Get Our
+                                Recommendation</button>
+                        </div>
                     </div>
 
-                    <div *ngIf="step == 'Consult Sales'">
-                        <mat-card class="example-card" *ngFor="let que of wifiSelectorQuestions">
-                            <mat-card-header>
-                                <mat-card-title>{{que.questionValue}}</mat-card-title>
-                            </mat-card-header>
-
-                            <mat-card-actions>
-                                <button *ngFor="let opt of que.options" class="example-actions" mat-icon-button
-                                    color="primary" aria-label="Example icon-button with a heart icon">
-                                    <mat-icon>circle </mat-icon> {{opt.optionValue}}
-                                </button>
-
-                            </mat-card-actions>
-                        </mat-card>
-
+                    <div *ngIf="step =='Model Selector'" class="display-flex">
+                        <div class="col-sm">
+                            <button mat-raised-button matStepperPrevious class="get-recommend" color="primary">Back to
+                                Refresh Selector</button>
+                        </div>
+                        <div class="col-sm move-right">
+                            <button mat-raised-button matStepperNext class="get-recommend" color="primary">Go to
+                                Pricing</button>
+                        </div>
                     </div>
 
+                    <div *ngIf="step =='Pricing'" class="display-flex">
+                        <div class="col-sm">
+                            <button mat-raised-button matStepperPrevious class="get-recommend" color="primary">Back to
+                                Model Selector</button>
+                        </div>
+                        <div class="col-sm move-right">
+                            <button mat-raised-button matStepperNext class="get-recommend" color="primary">Go to Consult
+                                Sales</button>
+                        </div>
+                    </div>
 
-
-
-            <div class="row top-bottom-padding">
-                <div class="col-sm" *ngIf="step !='Wi Fi Selector'">
-                    <button mat-raised-button matStepperPrevious color="primary">Previous</button>
+                    <div *ngIf="step =='Consult Sales'" class="display-flex">
+                        <div class="col-sm">
+                            <button mat-raised-button matStepperPrevious class="get-recommend" color="primary">Back to
+                                Pricing</button>
+                        </div>
+                        <div class="col-sm move-right">
+                            <button mat-raised-button matStepperNext class="get-recommend"
+                                color="primary">Submit</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm move-right"
-                    *ngIf="step =='Wi Fi Selector' || step =='Model Selector' || step =='Pricing'">
-                    <button mat-raised-button matStepperNext class="get-recommend" color="primary">Get Our Recommendation</button>
-                </div>
-                <div class="col-sm move-right" *ngIf="step =='Consult Sales'">
-                    <button mat-raised-button matStepperNext color="primary">Submit</button>
-                </div>
-            </div>
 
-        </mat-step>
-    </div>
-</mat-horizontal-stepper>
+            </mat-step>
+        </div>
+    </mat-horizontal-stepper>
 </div>

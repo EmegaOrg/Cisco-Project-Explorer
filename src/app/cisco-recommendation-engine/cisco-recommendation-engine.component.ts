@@ -22,7 +22,18 @@ export class CiscoRecommendationEngineComponent implements OnInit {
 }
  
 
-    steps = ["Wi Fi Selector", "Model Selector", "Pricing", "Consult Sales"];
+steps = ["Refresh Selector", "Model Selector", "Pricing", "Consult Sales"];
+
+formLables = ["First Name",
+    "Last Name",
+    "Job Title",
+    "Country",
+    "Company Name",
+    "Business Email",
+    "Business Phone",
+    "Cisco Partner CCO ID (if you have one)",
+    "Preferred Distributor or Partner (if any)",
+    "You can freely leave a message here."];
 
    
 }
